@@ -1,7 +1,6 @@
 export type tarefa = {
+    id: number,
     titulo: string;
-    id: string,
-    title: string,
-    description: string,
+    descricao: string,
     status: boolean
 };
