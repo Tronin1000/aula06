@@ -1,13 +1,19 @@
 import { NavigationContainer } from "@react-navigation/native"
 import { Rotas } from "./src/routes/rotas"
+import TestProvider from "./src/contexts/TesteContext"
+import AuthProvider from "./src/contexts/AuthContext"
 
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Rotas/>
+      <AuthProvider>
+        <TestProvider>
+          <Rotas />
+        </TestProvider>
+      </AuthProvider>
     </NavigationContainer>
-    
+
   )
 }
 
